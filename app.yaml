@@ -1,0 +1,29 @@
+runtime: php
+env: flex
+
+runtime_config:
+  document_root: public
+
+# Ensure we skip ".env", which is only for local development
+skip_files:
+  - .env
+
+env_variables:
+  # Put production environment variables here.
+  APP_NAME: HealthBot
+  APP_LOG: errorlog
+  APP_KEY: base64:ngGRZdJYLVAqWRQruSkLX0W6imSbOsow52UtaySnRaI=
+  STORAGE_DIR: /tmp
+  CACHE_DRIVER: database
+  SESSION_DRIVER: database
+  ## Set these environment variables according to your CloudSQL configuration.
+  DB_HOST: localhost
+  DB_DATABASE: healthbot
+  DB_USERNAME: healthbot
+  DB_PASSWORD: INNO9876
+  DB_SOCKET: "/cloudsql/healthbot-188003:asia-east1:healthbot"
+  
+beta_settings:
+  # for Cloud SQL, set this value to the Cloud SQL connection name,
+  # e.g. "project:region:cloudsql-instance"
+  cloud_sql_instances: "healthbot-188003:asia-east1:healthbot"
