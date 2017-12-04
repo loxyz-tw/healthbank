@@ -48,9 +48,18 @@
             "@php artisan package:discover"
         ],
         "post-install-cmd": [
- 		   "chmod -R 755 bootstrap\/cache",
+ 		    "Illuminate\\Foundation\\ComposerScripts::postInstall",
+            "php artisan optimize",
+            "chmod -R 755 bootstrap\/cache",
     		"php artisan cache:clear"
-		]
+		],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan optimize"
+        ],
+        "post-deploy-cmd": [
+            "chmod -R 755 bootstrap\/cache"
+        ]
     },
     "config": {
         "preferred-install": "dist",
