@@ -21,9 +21,9 @@ env_variables:
   DB_DATABASE: healthbot
   DB_USERNAME: healthbot
   DB_PASSWORD: INNO9876
-  DB_SOCKET: "/cloudsql/healthbot-188003:asia-east1:healthbot"
+  DB_SOCKET: "/cloudsql/healthbot-188011:asia-east1:healthbot"
   
 beta_settings:
   # for Cloud SQL, set this value to the Cloud SQL connection name,
   # e.g. "project:region:cloudsql-instance"
-  cloud_sql_instances: "healthbot-188003:asia-east1:healthbot"
+  cloud_sql_instances: "healthbot-188011:asia-east1:healthbot"
