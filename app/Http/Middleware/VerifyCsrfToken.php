@@ -14,6 +14,7 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         //
         '/bmi',
-    	'/clinic'
+    	'/clinic',
+    	'/risk',
     ];
 }
