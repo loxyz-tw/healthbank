@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::post('/bmi', 'BMIController@postBMI');
+Route::post('/clinic', 'ClinicController@getClinic');
